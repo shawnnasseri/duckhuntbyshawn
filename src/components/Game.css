@@ -1,0 +1,56 @@
+.gameArea {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    background-image: url('/backgrounds/swamp.jpg'); 
+    background-size: cover;
+    background-position: center;
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+
+.gameOverMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em; 
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+}
+
+.duck {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('/ducks/normal.gif'); 
+    background-size: cover;
+    cursor: pointer;
+}
+
+.duck.hit {
+    background-image: url('/ducks/hit.gif'); 
+}
+
+
+.scoreboard, .shotboard {
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    background: #007bff; 
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+  
+  .scoreboard {
+    left: 20px;
+  }
+  
+  .shotboard {
+    right: 20px;
+  }

@@ -1,0 +1,39 @@
+@keyframes flyRight {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(110vw); } 
+}
+
+@keyframes flyAcross {
+    0% { left: -10%; }
+    100% { left: 110%; }
+  }
+  
+  .duck {
+    position: absolute;
+    width: 100px; 
+    height: 100px; 
+    background-image: url('/ducks/normal.gif'); 
+    background-size: cover;
+    animation: flyAcross 10s linear infinite; 
+  }
+  
+
+.flying {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+    background-image: url('/ducks/normal.gif');
+    background-size: cover;
+    animation: flyRight 30s linear infinite; 
+    top: calc(20vh + var(--randomOffset) * 60vh); 
+    animation-delay: calc(var(--randomDelay) * -5s); 
+}
+
+.duck:active {
+    opacity: 0.5; 
+}
+
+:root {
+    --randomOffset: 0;
+    --randomDelay: 0; 
+}
